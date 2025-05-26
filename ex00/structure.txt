@@ -1,0 +1,14 @@
+name: <workflow-name>           # 👈 Optional name for your CI workflow
+
+on:                             # 👈 When to run this workflow
+  push:                         #   Run on every push (you can also use 'pull_request')
+    branches:
+      - main                    #   Run only when pushing to the 'main' branch
+
+jobs:                           # 👈 List of jobs to run
+  job-name:                     #   You can call this anything (e.g., build, test)
+    runs-on: ubuntu-latest      #   Which OS environment to run in (Ubuntu, Windows, macOS)
+
+    steps:                      # 👈 Steps to run in this job
+      - name: Step name         #   A name for this step (for clarity in the logs)
+        run: echo Hello CI World #   The command to run (can be shell, test, build...)
