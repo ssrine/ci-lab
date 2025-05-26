@@ -1,0 +1,13 @@
+name: MyFirstCI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: firsttest
+        run: echo "Hello, World"
